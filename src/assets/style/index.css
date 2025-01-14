@@ -1,0 +1,48 @@
+@import "reset.css";
+@import "components/index.css";
+/* @import "ui/index.css"; */
+
+
+html {
+  font-family: 'SF Pro Text', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  }
+
+body {
+  background: #f2f4f7;
+
+  width: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 108px;
+
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1224px) {
+  .container {
+    padding: 0 80px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 16px;
+  }
+}
