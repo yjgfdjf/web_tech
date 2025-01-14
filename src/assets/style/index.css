@@ -1,0 +1,27 @@
+@import "reset.css";
+@import "components/index.css";
+/* @import "ui/index.css"; */
+
+
+html {
+  font-family: 'SF Pro Text', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  background: #f2f4f7;
+
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  height: 100%;
+  padding: 0 108px;
+}

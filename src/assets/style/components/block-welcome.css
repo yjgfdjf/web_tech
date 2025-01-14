@@ -1,0 +1,123 @@
+.block__welcome {
+    margin-top: -56px;
+    height: 900px;
+}
+
+.block__welcome-content {
+    margin-top: 160px;
+
+    width: 600px;
+    height: 220px;
+
+    display: grid;
+    gap: 24px;
+}
+
+.block__welcome-title {
+    font-family: "Inter Bold", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 144%;
+    letter-spacing: 0.33px;
+    color: #101828;
+}
+
+.block__welcome-title span {
+    color: #306ff5;
+}
+
+.block__welcome-text {
+    font-family: "SF Pro Text Medium", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: #101828;
+}
+
+.block__welcome-form {
+    margin-top: 64px;
+
+    width: fit-content;
+    border-radius: 12px;
+    padding: 24px;
+
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.08);
+    background: #fff;
+
+    display: grid;
+    gap: 32px;
+}
+
+.block__welcome-subtitle {
+    width: 600px;
+
+    font-family: "Inter Bold", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.38px;
+    color: #101828;
+}
+
+.form__welcome {
+    width: 628px;
+    height: 58px;
+
+    display: flex;
+    gap: 24px;
+}
+
+.form__welcome-content {
+    display: grid;
+    gap: 8px;
+
+    flex: 1;
+}
+
+.form__welcome-content label {
+    font-family: "SF Pro Text Medium", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.08px;
+    color: #667085;
+}
+
+.form__welcome-content input {
+    border: none;
+    border-bottom: solid 0.7px #d0d5dd;
+
+    font-family: "SF Pro Text Regular", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.41px;
+    color: #101828;
+}
+
+.form__welcome button {
+    border-radius: 8px;
+    border: 0px;
+    padding: 11px 24px;
+    width: 132px;
+    height: 58px;
+
+    cursor: pointer;
+    background: #2d66ee;
+
+    text-align: left;
+    font-family: "SF Pro Text Semibold", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.15px;
+    color: #fff;
+}
+
+.block__welcome-image {
+    position: absolute;
+    top: 0;
+    margin-left: 520px;
+    z-index: -1;
+}
