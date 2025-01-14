@@ -1,0 +1,147 @@
+.block__ebook {
+    background: url("../../assets/img/ebook/ebook-background.png");
+    margin-left: -108px;
+    margin-right: -108px;
+    padding: 80px 108px 34px;
+    max-width: 1440px;
+    width: 100vw;
+    display: flex;
+    column-gap: 24px;
+
+    &-leftblock {
+        max-width: 600px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        img {
+            display: none;
+        }
+
+        .form-wrapper {
+            gap: 24px; 
+    
+            .button-blue {
+                align-self: flex-end;
+                width: fit-content;
+                height: fit-content;
+            }
+        }
+    }
+
+    &-rightblock {
+        max-width: 600px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    &-topblock {
+        display: none;
+    }
+
+    .block-title {
+        color: var(--color_7);
+    }
+
+    @media screen and (max-width: 1224px) {
+        margin-left: -80px;
+        margin-right: -80px;
+        padding: 80px;
+    }
+
+    @media screen and (max-width: 1023px) {
+        margin-left: -32px;
+        margin-right: -32px;
+        padding: 76px 32px 84px;
+        display: grid;
+        row-gap: 54px;
+        grid-template-columns: repeat(2, 1fr);
+
+        &-topblock {
+            display: initial;
+            max-width: 455px;
+            grid-column: span 2;
+        }
+
+        &-leftblock {
+            .block-title {
+                display: none;
+            }
+
+            .form-wrapper {
+                padding: 32px;
+                gap: 32px; 
+        
+                .button-blue {
+                    align-self: flex-start;
+                }
+            }
+        }
+
+        &-rightblock {
+            img {
+                max-height: 380px;
+                width: auto;
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        margin-left: -16px;
+        margin-right: -16px;
+        padding: 50px 48px 56px;
+        row-gap: 32px;
+        grid-template-columns: 1fr;
+
+        &-topblock {
+            max-width: 100%;
+            grid-column: 1;
+        }
+
+        &-leftblock {
+            max-width: 670px;
+            width: 100%;
+            gap: 32px;
+            display: flex;
+            align-items: center;
+
+            img {
+                display: initial;
+                height: 240px;
+                width: 160px;
+            }
+
+            .form-wrapper {
+                max-width: 480px;
+            }
+        }
+
+        &-rightblock {
+            display: none;
+        }
+    }
+}
+
+.form__ebook {
+    display: flex;
+    column-gap: 24px;
+    flex-wrap: wrap;
+    
+    &-content {
+		display: grid;
+		gap: 8px;
+        padding: 16px 0;
+		flex: 1;
+	}
+
+    @media screen and (max-width: 767px) {
+        gap: 16px;
+        flex-wrap: wrap;
+
+        &-content {
+            padding: 12px 0;
+        }
+    }
+}

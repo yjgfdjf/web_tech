@@ -1,0 +1,139 @@
+.block__devcycle {
+    background-color: var(--color_7);
+    margin-left: -108px;
+    margin-right: -108px;
+    padding: 80px 108px;
+    max-width: 1440px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+
+    &-leftblock {
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+    }
+
+    
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    
+    .adaptive {
+        display: none;
+    }
+    
+    &-tech {
+        width: 496px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &-rightblock {
+        max-width: 250px;
+        width: 100%;
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-item {
+        padding: 12px 0;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        width: fit-content;
+
+        a {
+            font-family: var(--font-family_7);
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 0.38px;
+            color: var(--color_4);
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+                font-family: var(--font-family_5);
+                font-weight: 600;
+                color: var(--color_1);
+                border-bottom: solid 1px var(--color_3);
+            }
+        }
+    }
+
+    @media screen and (max-width: 1224px) {
+        margin-left: -80px;
+        margin-right: -80px;
+        padding: 80px;
+    }
+
+    @media screen and (max-width: 1023px) {
+        margin-left: -32px;
+        margin-right: -32px;
+        padding: 32px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 32px;
+        column-gap: 82px;
+
+        &-leftblock {
+            margin-left: 40px;
+            max-width: 400px;
+            width: 100%;
+            gap: 32px;
+
+            .block__devcycle-content:first-of-type  {
+                display: none;
+            }
+        }
+
+        .adaptive {
+            grid-column: span 2;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            margin-left: 40px;
+        }
+
+        &-content,
+        &-tech {
+            width: 320px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        margin-left: -16px;
+        margin-right: -16px;
+        padding: 32px 16px 52px;
+        column-gap: 0;
+
+        &-leftblock {
+            margin-left: 0;
+            max-width: 320px;
+        }
+
+        .adaptive {
+            margin-left: 0;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .adaptive, &-leftblock, &-rightblock {
+            margin-left: 0;
+            max-width: 350px;
+            width: 100%;
+        }
+    }
+}

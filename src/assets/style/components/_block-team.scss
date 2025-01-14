@@ -1,0 +1,154 @@
+.block__team {
+    padding: 80px 0;
+    display: flex;
+    gap: 24px;
+
+    &-leftblock {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        max-width: 600px;
+        width: 100%;
+    }
+
+    &-stats {
+        padding: 8px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    &-stat {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        max-width: 170px;
+        width: 100%;
+
+        .block-title {
+            font-size: 48px;
+        }
+
+        .block-label {
+            font-size: 15px;
+            line-height: 20px;
+            letter-spacing: -0.24px;
+        }
+    }
+
+    &-image {
+        position: relative;
+
+        .icon-wrapper {
+            position: absolute;
+            top: 38%;
+            left: 46%;
+            background-color: var(--color_3);
+            cursor: pointer;
+        }
+
+        &-adaptive {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        padding: 38px 0 52px;
+
+        &-leftblock {
+            gap: 32px;
+            max-width: 700px;
+            width: 100%;
+
+            .block-text {
+                font-size: 14px;
+
+                &:nth-of-type(1){
+                    max-width: 414px;
+                }
+
+                &:nth-of-type(2){
+                    max-width: 614px;
+                }
+            }
+        }
+
+        &-rightblock {
+            display: none;
+        }
+    
+        &-stat {
+            max-width: 184px;
+        }
+
+        &-image {
+            position: relative;
+
+            &-adaptive {
+                position: relative;
+                display: initial;
+                margin-bottom: 12px;
+
+                img:nth-of-type(2){
+                    display: none;
+                }
+
+                .icon-wrapper {
+                    position: absolute;
+                    top: 36%;
+                    left: 48%;
+                    background-color: var(--color_3);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 28px 0 44px;
+        justify-content: center;
+
+        &-leftblock {
+            gap: 20px;
+            max-width: 392px;
+        }
+    
+        &-stats {
+            max-width: 392px;
+            gap: 50px;
+        }
+
+        &-stat {
+            max-width: fit-content;
+            gap: 20px;
+
+            .block-title {
+                font-size: 28px;
+            }
+    
+            .block-label {
+                font-size: 14px;
+                line-height: 14px;
+            }
+        }
+
+        &-image {
+            position: relative;
+
+            &-adaptive {
+                img:nth-of-type(1){
+                    display: none;
+                }
+
+                img:nth-of-type(2){
+                    display: initial;
+                }
+
+                .icon-wrapper {
+                    top: 32%;
+                    left: 46%;
+                }
+            }
+        }
+    }
+}

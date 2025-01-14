@@ -1,0 +1,129 @@
+.block__stages {
+    background-color: var(--color_7);
+    margin-left: -108px;
+    margin-right: -108px;
+    padding: 80px 108px;
+    max-width: 1440px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+
+    &-content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &-leftblock, &-rightblock {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &-item {
+        position: relative;
+        box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.08), 0 0 2px 0 rgba(0, 0, 0, 0.08);
+        background: var(--background-color_1);
+        border-radius: 12px;
+        width: fit-content;
+        height: 172px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 24px;
+        overflow: hidden;
+
+        &-number {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            width: 149px;
+            height: 172px;
+            text-align: end;
+        }
+
+        .block-subtitle {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .block-text {
+            font-family: var(--font-family_6);
+            position: relative;
+            z-index: 2;
+            max-width: 375px;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 1224px) {
+        margin-left: -80px;
+        margin-right: -80px;
+        padding: 80px;
+    }
+
+    @media screen and (max-width: 1023px) {
+        margin-left: -32px;
+        margin-right: -32px;
+        padding: 32px;
+        gap: 44px;
+
+        &-content, &-leftblock, &-rightblock {
+            gap: 32px;
+            width: 100%;
+        }
+
+        &-leftblock {
+            .block__stages-item:first-of-type .block__stages-item-number {
+                right: 22px;
+            }
+        }
+
+        &-item {
+            width: 100%;
+
+            .block-text {
+                font-size: 14px;
+                max-width: 504px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        margin-left: -16px;
+        margin-right: -16px;
+        padding: 32px 16px 20px;
+        gap: 50px;
+
+        &-content, &-leftblock, &-rightblock {
+            gap: 20px;
+        }
+
+        &-leftblock {
+            .block__stages-item:first-of-type .block__stages-item-number {
+                right: 0;
+            }
+        }
+
+        &-item {
+            height: 192px;
+
+            .block-text {
+                max-width: 270px;
+            }
+
+            &-number {
+                svg{
+                    height: 192px;
+                    width: auto;
+                }
+            }
+        }
+    }
+}
