@@ -1,33 +1,33 @@
 class Pizza {
     constructor(type, size) {
         this.types = {
-            Маргарита: { price: 500, calories: 300 },
-            Пепперони: { price: 800, calories: 400 },
-            Баварская: { price: 700, calories: 450 },
+            РњР°СЂРіР°СЂРёС‚Р°: { price: 500, calories: 300 },
+            РџРµРїРїРµСЂРѕРЅРё: { price: 800, calories: 400 },
+            Р‘Р°РІР°СЂСЃРєР°СЏ: { price: 700, calories: 450 },
         };
 
         this.sizes = {
-            Большая: { price: 200, calories: 200 },
-            Маленькая: { price: 100, calories: 100 },
+            Р‘РѕР»СЊС€Р°СЏ: { price: 200, calories: 200 },
+            РњР°Р»РµРЅСЊРєР°СЏ: { price: 100, calories: 100 },
         };
 
         this.toppingsData = {
-            "сливочная моцарелла": { price: 50, calories: 20 },
-            "сырный борт": {
-                Маленькая: { price: 150, calories: 50 },
-                Большая: { price: 300, calories: 50 },
+            "СЃР»РёРІРѕС‡РЅР°СЏ РјРѕС†Р°СЂРµР»Р»Р°": { price: 50, calories: 20 },
+            "СЃС‹СЂРЅС‹Р№ Р±РѕСЂС‚": {
+                РњР°Р»РµРЅСЊРєР°СЏ: { price: 150, calories: 50 },
+                Р‘РѕР»СЊС€Р°СЏ: { price: 300, calories: 50 },
             },
-            "чедер и пармезан": {
-                Маленькая: { price: 150, calories: 50 },
-                Большая: { price: 300, calories: 50 },
+            "С‡РµРґРµСЂ Рё РїР°СЂРјРµР·Р°РЅ": {
+                РњР°Р»РµРЅСЊРєР°СЏ: { price: 150, calories: 50 },
+                Р‘РѕР»СЊС€Р°СЏ: { price: 300, calories: 50 },
             },
         };
 
         if (!this.types[type]) {
-            throw new Error("Неизвестный тип пиццы");
+            throw new Error("РќРµРёР·РІРµСЃС‚РЅС‹Р№ С‚РёРї РїРёС†С†С‹");
         }
         if (!this.sizes[size]) {
-            throw new Error("Неизвестный размер пиццы");
+            throw new Error("РќРµРёР·РІРµСЃС‚РЅС‹Р№ СЂР°Р·РјРµСЂ РїРёС†С†С‹");
         }
 
         this.type = type;
@@ -37,7 +37,7 @@ class Pizza {
 
     addTopping(topping) {
         if (!this.toppingsData[topping]) {
-            console.log(`Добавка "${topping}" не найдена`);
+            console.log(`Р”РѕР±Р°РІРєР° "${topping}" РЅРµ РЅР°Р№РґРµРЅР°`);
             return;
         }
         if (!this.toppings.includes(topping)) {
@@ -87,19 +87,19 @@ class Pizza {
 }
 
 
-const myPizza = new Pizza("Пепперони", "Большая");
+const myPizza = new Pizza("РџРµРїРїРµСЂРѕРЅРё", "Р‘РѕР»СЊС€Р°СЏ");
 
-myPizza.addTopping("сливочная моцарелла");
-myPizza.addTopping("сырный борт");
+myPizza.addTopping("СЃР»РёРІРѕС‡РЅР°СЏ РјРѕС†Р°СЂРµР»Р»Р°");
+myPizza.addTopping("СЃС‹СЂРЅС‹Р№ Р±РѕСЂС‚");
 
-console.log("Размер пиццы:", myPizza.getSize());          
-console.log("Тип пиццы:", myPizza.getStuffing());         
-console.log("Добавки:", myPizza.getToppings());         
-console.log("Цена:", myPizza.calculatePrice());            
-console.log("Калории:", myPizza.calculateCalories());     
+console.log("Р Р°Р·РјРµСЂ РїРёС†С†С‹:", myPizza.getSize());          
+console.log("РўРёРї РїРёС†С†С‹:", myPizza.getStuffing());         
+console.log("Р”РѕР±Р°РІРєРё:", myPizza.getToppings());         
+console.log("Р¦РµРЅР°:", myPizza.calculatePrice());            
+console.log("РљР°Р»РѕСЂРёРё:", myPizza.calculateCalories());     
 
-myPizza.removeTopping("сливочная моцарелла");
+myPizza.removeTopping("СЃР»РёРІРѕС‡РЅР°СЏ РјРѕС†Р°СЂРµР»Р»Р°");
 
-console.log("Добавки после удаления:", myPizza.getToppings());
-console.log("Новая цена:", myPizza.calculatePrice());
-console.log("Новые калории:", myPizza.calculateCalories());
+console.log("Р”РѕР±Р°РІРєРё РїРѕСЃР»Рµ СѓРґР°Р»РµРЅРёСЏ:", myPizza.getToppings());
+console.log("РќРѕРІР°СЏ С†РµРЅР°:", myPizza.calculatePrice());
+console.log("РќРѕРІС‹Рµ РєР°Р»РѕСЂРёРё:", myPizza.calculateCalories());
