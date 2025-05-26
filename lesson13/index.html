@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Калькулятор пиццы</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="pizza-types">
+    <div class="pizza-types">
+        <button onclick="selectPizza('Маргарита')">
+          <img src="images/margarita.png" alt="Маргарита" />
+          Маргарита
+        </button>
+        <button onclick="selectPizza('Пепперони')">
+          <img src="images/pepperoni.png" alt="Пепперони" />
+          Пепперони
+        </button>
+        <button onclick="selectPizza('Баварская')">
+          <img src="images/bavarskaya.png" alt="Баварская" />
+          Баварская
+        </button>
+      </div>
+      
+  </div>
+
+  <div class="pizza-size">
+    <label><input type="radio" name="size" value="Маленькая" checked onchange="selectSize('Маленькая')"> Маленькая</label>
+    <label><input type="radio" name="size" value="Большая" onchange="selectSize('Большая')"> Большая</label>
+  </div>
+
+  <div class="toppings">
+    <label><input type="checkbox" value="Сырный бортик" onchange="toggleTopping(this)"> Сырный бортик</label>
+    <label><input type="checkbox" value="Сливочная моцарелла" onchange="toggleTopping(this)"> Сливочная моцарелла</label>
+    <label><input type="checkbox" value="Чеддер и пармезан" onchange="toggleTopping(this)"> Чеддер и пармезан</label>
+  </div>
+
+  <button id="add-to-cart">Добавить в корзину за 0₽ (0 кКал)</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

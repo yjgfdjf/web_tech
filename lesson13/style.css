@@ -1,0 +1,131 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center; 
+  }
+
+  .pizza-types {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center; 
+    max-width: 900px; 
+    width: 100%;
+  }
+
+  .pizza-types button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: 2px solid #ff6600;
+    background-color: white;
+    color: #ff6600;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s, color 0.2s;
+    min-width: 130px; 
+  }
+
+  .pizza-types button:hover,
+  .pizza-types button.selected {
+    background-color: #ff6600;
+    color: white;
+    border-color: #ff6600;
+  }
+
+  .pizza-size {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .pizza-size label {
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s, border-color 0.2s;
+    flex: 1;
+    text-align: center;
+  }
+
+  .pizza-size input[type="radio"] {
+    display: none;
+  }
+
+  .pizza-size input[type="radio"]:checked + label {
+    background-color: #ff6600;
+    border-color: #ff6600;
+    color: white;
+  }
+
+  .toppings {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .toppings label {
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .toppings input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  #add-to-cart {
+    padding: 15px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    transition: background-color 0.3s;
+    align-self: center;
+  }
+  
+  #add-to-cart:hover {
+    background-color: #e65500;
+  }
+
+  .pizza-types button img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    pointer-events: none;
+  }
+  
+  .pizza-size label.selected {
+    background-color: #ff6600;
+    border-color: #ff6600;
+    color: white;
+  }
+  
