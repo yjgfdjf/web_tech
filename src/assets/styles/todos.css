@@ -1,0 +1,46 @@
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.todo-item__description {
+    flex-grow: 1;
+    font-size: 1rem;
+}
+
+.todo-item__checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+.todo-item__delete {
+    background: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.todo-item__delete:hover {
+    background: #d9363e;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 500px;
+}
